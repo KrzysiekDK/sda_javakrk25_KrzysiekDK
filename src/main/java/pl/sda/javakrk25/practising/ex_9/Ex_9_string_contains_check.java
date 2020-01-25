@@ -8,11 +8,11 @@ public class Ex_9_string_contains_check {
      * @param args
      */
     public static void main(String[] args) {
-        String text = "Some long text";
+        String text = "Some loong text";
         String textToCheck = "ong t";
 
-        char[] sentence = text.toCharArray();
-        char[] word = textToCheck.toCharArray();
+        char[] sentence = text.toLowerCase().toCharArray();
+        char[] word = textToCheck.toLowerCase().toCharArray();
 
 
         if (contains(sentence, word)) {
@@ -25,15 +25,18 @@ public class Ex_9_string_contains_check {
 
     private static boolean contains(char[] sentence, char[] word) {
         int j = 0;
-        for (int i = 0; i < sentence.length; i++) {
+        int i = 0;
+        while (i <= sentence.length) {
             if (sentence[i] == word[j]) {
                 if (j == word.length - 1) {
                     return true;
                 }
                 j++;
             } else {
+                i -= j;
                 j = 0;
             }
+            i++;
         }
         return false;
     }
