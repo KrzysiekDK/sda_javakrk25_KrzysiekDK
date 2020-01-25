@@ -4,6 +4,12 @@ import java.util.Random;
 
 public class Zad_14_histogram {
 
+    /**
+     * Stworzyć program, który generujr histogram
+     *
+     * @param args
+     */
+
     public static void main(String[] args) {
         int[] histogram = new int[10];
         Random random = new Random();
