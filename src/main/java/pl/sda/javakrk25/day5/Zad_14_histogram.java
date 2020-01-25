@@ -4,6 +4,11 @@ import java.util.Random;
 
 public class Zad_14_histogram {
 
+    /**
+     * Stworzyć program który generuje historgram z losowych liczb
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         int[] histogram = new int[10];
         Random random = new Random();
