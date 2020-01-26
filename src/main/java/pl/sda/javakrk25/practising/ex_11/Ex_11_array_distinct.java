@@ -1,6 +1,6 @@
 package pl.sda.javakrk25.practising.ex_11;
 
-import java.util.Arrays;
+import pl.sda.javakrk25.practising.ArrayUtil;
 
 public class Ex_11_array_distinct {
 
@@ -20,24 +20,12 @@ public class Ex_11_array_distinct {
     private static int[] getDistinct(int[] ints) {
         int[] result = new int[0];
         for (int i : ints) {
-            if (!contains(result, i)) {
-                result = addToEnd(result, i);
+            if (!ArrayUtil.contains(result, i)) {
+                result = ArrayUtil.addToEnd(result, i);
             }
         }
         return result;
     }
 
-    private static int[] addToEnd(int[] tab, int element) {
-        int[] array = Arrays.copyOf(tab, tab.length + 1);
-        array[array.length - 1] = element;
-        return array;
-    }
-
-    private static boolean contains(int[] tab, int element) {
-        for (int i : tab) {
-            if (i == element) return true;
-        }
-        return false;
-    }
 
 }
