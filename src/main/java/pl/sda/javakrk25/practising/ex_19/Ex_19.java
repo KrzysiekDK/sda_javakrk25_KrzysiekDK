@@ -19,8 +19,10 @@ public class Ex_19 {
     public static int sumInRange(int A, int B) {
         if (A > B) {
             return sumInValideRange(B, A);
-        } else {
+        } else if (A < B) {
             return sumInValideRange(A, B);
+        } else {
+            return B;
         }
     }
 
@@ -32,4 +34,21 @@ public class Ex_19 {
         return sum;
     }
 
+    public static int sumInValideRangeWhile(int A, int B) {
+        int sum = 0;
+        while (A <= B) {
+            sum += A;
+            A++;
+        }
+        return sum;
+    }
+
+    public static int sumInValideRangeDoWhile(int A, int B) {
+        int sum = 0;
+        do {
+            sum += A;
+            A++;
+        } while (A <= B);
+        return sum;
+    }
 }
