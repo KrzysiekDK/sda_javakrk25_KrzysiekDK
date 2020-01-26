@@ -1,6 +1,6 @@
 package pl.sda.javakrk25.practising.ex_18;
 
-import java.util.Scanner;
+import pl.sda.javakrk25.practising.ScannerUtil;
 
 public class Ex_18 {
 
@@ -11,7 +11,7 @@ public class Ex_18 {
      * @param args
      */
     public static void main(String[] args) {
-        int x = getNumber();
+        int x = ScannerUtil.getNaturalNumber();
         int n = 1;
 
 //      while (n<x){
@@ -23,14 +23,5 @@ public class Ex_18 {
         }
     }
 
-    public static int getNumber() {
-        Scanner scanner = new Scanner(System.in);
-        int n = -1;
-        do {
-            System.out.println("Provide number");
-            n = scanner.nextInt();
-        } while (n < 1);
 
-        return n;
-    }
 }
