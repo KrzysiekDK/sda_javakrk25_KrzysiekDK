@@ -14,4 +14,10 @@ public class ScannerUtil {
 
         return n;
     }
+
+    public static String readUserInput() {
+        System.out.println("Hello, please provide text");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine();
+    }
 }
